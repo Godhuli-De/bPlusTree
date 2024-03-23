@@ -1,0 +1,10 @@
+REQUIREMENTS
+Java 1.8
+
+To Run Project
+    Go to the project folder and run “cmd” command from there.
+    Then run javac *.java
+    Next, run java TreeMemoryManagement
+
+
+Congratulations! Now the project should run successfully, and you should be able to see GUI interface.

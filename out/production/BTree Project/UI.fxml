@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <left>
+      <VBox alignment="TOP_CENTER" prefWidth="400.0" style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+         </BorderPane.margin>
+         <children>
+           <Label style="-fx-background-color: #f2f2f3; -fx-font-weight: bold;" text="Tree memory management">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin></Label>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="70.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="10.0" prefWidth="159.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Product" />
+                  <TextField fx:id="productField" prefHeight="25.0" prefWidth="132.0" GridPane.columnIndex="1" />
+                  <Label text="Description" GridPane.rowIndex="1" />
+                  <TextField fx:id="descriptionField" prefHeight="25.0" prefWidth="129.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </GridPane>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <RadioButton fx:id="searchRadio" mnemonicParsing="false" text="Search">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="insertRadio" mnemonicParsing="false" text="Insert" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="deleteRadio" mnemonicParsing="false" text="Delete" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="updateRadio" mnemonicParsing="false" text="Update" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </GridPane>
+            <VBox prefHeight="36.0" prefWidth="249.0">
+               <children>
+                  <Button fx:id="executeButton" alignment="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="91.0" text="Execute" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="10.0" right="20.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="TOP_CENTER" style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                   <Label style="-fx-background-color: #f2f2f3; -fx-font-weight: bold;" text="Action Result">
+                       <font>
+                           <Font size="14.0" />
+                       </font>
+                       <VBox.margin>
+                           <Insets top="-10.0" />
+                       </VBox.margin></Label>
+                  <Label fx:id="resultText" text="Search, Insert and Delete result will be displayed here." wrapText="true" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children></VBox>
+   </left>
+   <center>
+      <VBox prefHeight="400.0" prefWidth="209.0" style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+         </BorderPane.margin>
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="309.0" style="-fx-font-weight: bold;" text="Output/Statistic/Report" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <TreeView fx:id="treeView" prefHeight="283.0" prefWidth="307.0" VBox.vgrow="ALWAYS" />
+         </children></VBox>
+   </center>
+   <bottom>
+      <HBox alignment="TOP_CENTER" prefHeight="27.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="exitButton" alignment="CENTER" mnemonicParsing="false" text="Exit" textAlignment="JUSTIFY" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>
